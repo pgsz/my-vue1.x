@@ -15,11 +15,11 @@ export default function defineReactive(target, key, val) {
           childOb.dep.depend()
         }
       }
-      // console.log('getter key = ', key)
+      console.log('getter key = ', key)
       return val
     },
     set(newVal) {
-      // console.log(`setter ${key} = ${val}`)
+      console.log(`setter ${key} = ${val}`)
       if (newVal == val) return
       val = newVal
       //  对新值做响应式处理
